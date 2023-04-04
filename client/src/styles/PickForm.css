@@ -15,6 +15,7 @@
 
 .button {
   border: 5px solid goldenrod;
+  border-radius: 6px;
   height: 5vh;
   width: 10vw;
 
