@@ -16,11 +16,11 @@ const Nav = ({ user, handleLogout }) => {
         </div>
         <div>
           <h1 className="name">
-            SMART PICKS
+            S M A R T         P I C K S
           </h1>
         </div>
         <div className="logout">
-          <NavLink to="/" onClick={handleLogout} className="logout link">
+          <NavLink to="/" onClick={handleLogout} className="logoutButton">
             <i class="fa-solid fa-user-xmark"></i>
           </NavLink>
         </div>
@@ -28,7 +28,7 @@ const Nav = ({ user, handleLogout }) => {
     </nav>
   ) : (
     <nav className="navBar">
-      <h1 className="welcome">Welcome! Please <NavLink to="/register">Register</NavLink> or <NavLink to="/login">Login</NavLink></h1>
+      <h1 className="welcome">Welcome! Please <NavLink to="/register" className="clickable">Register</NavLink> or <NavLink to="/login" className="clickable">Login</NavLink></h1>
     </nav>
   )
 }

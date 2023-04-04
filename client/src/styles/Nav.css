@@ -1,9 +1,9 @@
 .navBar {
   display: grid;
-  height: 7.5vh;
+  height: 8vh;
   align-items: center;
   grid-template-columns: 2fr 2fr 2fr;
-  background-color: rgb(180, 53, 31);
+  background-color: rgb(21, 182, 0);
   border: 10px;
   border-radius: 5px;
 
@@ -15,6 +15,12 @@
   color: rgb(196, 196, 196);
   margin: 1vw;
   font-size: x-large;
+  transition: transform 0.2s;
+}
+
+.link:hover {
+  transform: scale(1.4);
+  color: black;
 }
 
 .logout {
@@ -23,18 +29,47 @@
 
 }
 
+.logoutButton {
+  color: rgb(196, 196, 196);
+  margin: 1vw;
+  font-size: x-large;
+  transition: transform 0.2s;
+}
+
+.logoutButton:hover {
+  transform: scale(1.2);
+}
+
+
 .mainLinks {
   display: flex;
   gap: 2vw;
   padding-left: 1.5vw;
 
 
+
 }
 
 .name {
   text-align: center;
-  font-family: 'Alfa Slab One', cursive;
-  font-size: x-large;
-  color: rgb(247, 247, 247);
+  justify-content: center;
 
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 3vh;
+  color: rgb(0, 0, 0);
+
+}
+
+.welcome {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.clickable {
+  color: black;
+  text-decoration: underline;
+  transition: transform 0.2s;
+}
+
+.clickable:hover {
+  color: rgb(88, 88, 88);
 }

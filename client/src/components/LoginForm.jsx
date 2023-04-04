@@ -25,21 +25,23 @@ const LoginForm = ({ setUser }) => {
   }
 
   return (
-    <div className="login-container">
+    <div className='formContainer'>
       <form onSubmit={handleSubmit} className="login-form">
-        <div className='formValues'>
+        <div className='formValues loginForm'>
+          <h1>Login to check live odds</h1>
 
           <label htmlFor="email" className="login-email-label">
             Email
           </label>
           <input
+
             onChange={handleChange}
             name="email"
             type="email"
             value={formValues.email}
             required
             placeholder="Email"
-            className="login-email-input"
+            className="input"
           />
 
 
@@ -54,10 +56,10 @@ const LoginForm = ({ setUser }) => {
             value={formValues.password}
             required
             placeholder="Password"
-            className="login-password-input"
+            className="input"
           />
 
-          <button disabled={!formValues.email || !formValues.password}>
+          <button className='formButton' disabled={!formValues.email || !formValues.password}>
             Log In
           </button>
         </div>

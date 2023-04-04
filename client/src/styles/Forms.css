@@ -1,6 +1,6 @@
 .formValues {
   border: 5px solid rgb(0, 0, 0);
-  height: 60vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +8,7 @@
   width: 40vw;
   margin: auto;
   gap: 2vh;
-  background-color: rgb(255, 145, 0);
+  background-color: rgb(29, 165, 11);
   border-radius: 5px;
   box-shadow: rgba(128, 128, 128, 0.548) 5px 5px;
 }
@@ -19,4 +19,30 @@
   align-items: center;
   margin: 2vh;
   gap: 1vw;
+  font-size: larger;
+}
+
+.formContainer {
+  padding-top: 4vh;
+}
+
+.loginForm {
+  height: 40vh;
+  width: 25vw;
+}
+
+.input {
+  border: 5px solid black;
+  width: 11vw;
+  height: 3vh;
+  border-radius: 5px;
+}
+
+.join {
+  text-decoration: underline;
+}
+
+.formButton {
+  height: 5vh;
+  font-family: 'Alfa Slab One', cursive;
 }

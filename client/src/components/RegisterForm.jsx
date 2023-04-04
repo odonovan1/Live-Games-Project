@@ -33,22 +33,23 @@ const RegisterForm = () => {
       <form onSubmit={handleSubmit}>
         <div className='formValues'>
           <div className='value'>
+            <h3 className='join'>Join SMART PICKS today</h3>
             <label htmlFor="username">Username</label>
-            <input onChange={handleChange} name="username" type="text" value={formValues.username} required placeholder='username' />
+            <input className="input" onChange={handleChange} name="username" type="text" value={formValues.username} required placeholder='username' />
           </div>
           <div className='value'>
             <label htmlFor="email">Email</label>
-            <input onChange={handleChange} name="email" type="text" value={formValues.email} required placeholder='email' />
+            <input className="input" onChange={handleChange} name="email" type="text" value={formValues.email} required placeholder='email' />
           </div>
           <div className='value'>
             <label htmlFor="password">Password</label>
-            <input onChange={handleChange} name="password" type="text" value={formValues.password} required placeholder='password' />
+            <input className="input" onChange={handleChange} name="password" type="text" value={formValues.password} required placeholder='password' />
           </div >
           <div className='value'>
             <label htmlFor="confirmPassword">Confirm Password</label>
-            <input onChange={handleChange} name="confirmPassword" type="text" value={formValues.confirmPassword} required placeholder='confirmPassword' />
+            <input className="input" onChange={handleChange} name="confirmPassword" type="text" value={formValues.confirmPassword} required placeholder='confirmPassword' />
           </div>
-          <button
+          <button className='formButton'
             disabled={
               !formValues.username ||
               (!formValues.password &&
