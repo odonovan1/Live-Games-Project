@@ -69,7 +69,7 @@ function App() {
           <Route path="/user" element={<UserPage user={user} />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/details" element={<GameDetails chosen={chosen} setChosen={setChosen} user={user} />} />
-          <Route path="/login" element={<LoginForm />}></Route>
+          <Route path="/login" element={<LoginForm setUser={setUser} />}></Route>
           <Route path="/register" element={<RegisterForm />}></Route>
         </Routes>
 
