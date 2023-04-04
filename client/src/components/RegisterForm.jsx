@@ -26,6 +26,7 @@ const RegisterForm = () => {
     })
 
     setFormValues(initialState)
+    navigate('/login')
 
   }
   return (
