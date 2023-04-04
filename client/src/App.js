@@ -27,6 +27,7 @@ function App() {
   const [chosen, setChosen] = useState(null)
   const [other, setOther] = useState(null)
   const [users, setUsers] = useState(null)
+  const [loaded, setLoaded] = useState(false)
   const apiKey = process.env.REACT_APP_ODDS_KEY
 
 
@@ -70,7 +71,7 @@ function App() {
     }
     getGames()
     getUsers()
-  }, [refresh])
+  }, [refresh, loaded])
   return (
     <div className="App">
       <Nav user={user} handleLogout={handleLogout} checkToken={checkToken} />
@@ -84,7 +85,7 @@ function App() {
           <Route path="/login" element={<LoginForm setUser={setUser} />}></Route>
           <Route path="/register" element={<RegisterForm />}></Route>
           <Route path="/password" element={<UpdatePasswordForm user={user} />}></Route>
-          <Route path="/users" element={<Users setOther={setOther} users={users} getUsers={getUsers} />}></Route>
+          <Route path="/users" element={<Users setOther={setOther} users={users} getUsers={getUsers} setLoaded={setLoaded} />}></Route>
           <Route path="/view" element={<UserDetails other={other} />}></Route>
         </Routes>
 

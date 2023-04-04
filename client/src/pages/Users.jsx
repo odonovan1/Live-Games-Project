@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
 import '../styles/Users.css'
 
-const Users = ({ setOther, users }) => {
+const Users = ({ setOther, users, setLoaded }) => {
 
   console.log(users)
+  setLoaded(true)
 
   const handleClick = (other) => {
     setOther(other)
