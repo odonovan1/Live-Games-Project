@@ -26,6 +26,10 @@ const UserPage = ({ user }) => {
 
   }
 
+  const handleDelete = async () => {
+
+  }
+
 
   useEffect(() => {
     getPicks()
@@ -44,7 +48,7 @@ const UserPage = ({ user }) => {
 
             <h2 className="pickDetails">{pick.name} to beat {pick.pick_id}</h2>
             <h3>{pick.price} Moneyline</h3>
-
+            <button>DELETE</button>
           </div>
         ))}
       </div>

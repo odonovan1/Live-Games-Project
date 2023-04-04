@@ -22,10 +22,15 @@ const getUserPicks = async (req, res) => {
   res.send(picks)
 }
 
+const deletePick = async (req, res) => {
+  await Pick.destroy({ where: { id: req.params.pick_id } })
+}
+
 
 
 
 module.exports = {
   CreatePick,
-  getUserPicks
+  getUserPicks,
+  deletePick
 }
