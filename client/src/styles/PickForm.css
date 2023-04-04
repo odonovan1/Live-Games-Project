@@ -18,5 +18,12 @@
   border-radius: 6px;
   height: 5vh;
   width: 10vw;
+  font-family: 'Alfa Slab One', cursive;
+  transition: transform 0.2s;
 
+}
+
+.button:hover {
+  transform: scale(1.2);
+  border: 5px solid red;
 }

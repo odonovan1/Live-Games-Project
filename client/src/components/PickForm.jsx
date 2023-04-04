@@ -2,14 +2,16 @@ import axios from 'axios'
 import { useState } from 'react'
 import Client from '../services/api'
 import '../styles/PickForm.css'
+import { useNavigate } from 'react-router-dom'
 
 const PickForm = ({ user, chosen }) => {
   const initialState = {
-    price: 1,
+    price: 'selection',
     name: null
 
 
   }
+  let navigate = useNavigate()
 
   const [gameDetails, setGameDetails] = useState(null)
   const [formValues, setFormValues] = useState(initialState)
@@ -38,6 +40,7 @@ const PickForm = ({ user, chosen }) => {
       `http://localhost:3001/api/pick/create/${user.id}/${userGame.data.id}`, formValues)
 
     setFormValues(initialState)
+    navigate('/games')
   }
 
   return (
@@ -48,7 +51,7 @@ const PickForm = ({ user, chosen }) => {
           <button className='button' onClick={() => homeTeam()}>{chosen.home_team}</button>
           <button className='button' onClick={() => awayTeam()}>{chosen.away_team}</button>
         </div>
-        <h1>{formValues.name}</h1>
+        <h2>{formValues.name} ({formValues.price})</h2>
 
         <button className='button' onClick={handleSubmit}>Submit Pick</button>
       </div>
