@@ -24,7 +24,7 @@ const Home = ({ user, setUser }) => {
 
   return user ? (
     <div className='home'>
-      <div className='welcome'>
+      <div className='welcomem'>
 
         <h1 className='h1'>Welcome to the future of social picking!</h1>
       </div>
