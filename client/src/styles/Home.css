@@ -30,6 +30,6 @@ img {
 }
 
 .clickable:hover {
-  color: rgb(16, 192, 0);
+  color: rgb(160, 28, 18);
   transform: scale(1.2);
 }
