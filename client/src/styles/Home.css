@@ -3,6 +3,10 @@
   flex-direction: column;
   margin: auto;
   text-align: center;
+  background-color: rgb(83, 83, 83);
+  width: 70vw;
+  margin-top: 2vh;
+  border-radius: 10px;
 }
 
 img {
