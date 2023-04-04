@@ -46,4 +46,7 @@
 
 .teams {
   text-align: center;
+  border: 7px solid goldenrod;
+  margin: 1vw;
+  border-radius: 6px;
 }
