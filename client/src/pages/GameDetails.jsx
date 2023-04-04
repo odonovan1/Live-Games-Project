@@ -9,7 +9,7 @@ const GameDetails = ({ chosen, user }) => {
       <div className="details">
         <h2>Organization: {chosen.sport_title}</h2>
         <div className="teamDetails">
-          <h3>Home Team: {chosen.home_team}</h3>
+          <h3>Home: {chosen.home_team}</h3>
 
           <div className="odds">
             <h3>Moneyline:  {chosen.bookmakers[0].markets[0].outcomes[0].price}</h3>
@@ -17,7 +17,7 @@ const GameDetails = ({ chosen, user }) => {
         </div>
 
         <div className="teamDetails">
-          <h3>Away Team: {chosen.away_team} </h3>
+          <h3>Away: {chosen.away_team} </h3>
 
           <div className="odds">
             <h3>Moneyline:  {chosen.bookmakers[0].markets[0].outcomes[1].price}</h3>

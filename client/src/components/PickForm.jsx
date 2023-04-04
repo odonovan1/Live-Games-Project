@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useState } from 'react'
 import Client from '../services/api'
+import '../styles/PickForm.css'
 
 const PickForm = ({ user, chosen }) => {
   const initialState = {
