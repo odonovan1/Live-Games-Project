@@ -17,4 +17,5 @@
 
 .matchup {
   display: flex;
+  justify-content: center;
 }
