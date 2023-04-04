@@ -7,4 +7,17 @@
   width: 45vw;
   margin: auto;
   margin-top: 4vh;
+  border: 8px solid black;
+  border-radius: 7px;
+}
+
+.teamDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+}
+
+h2 {
+  text-align: center;
 }

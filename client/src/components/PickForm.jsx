@@ -41,11 +41,11 @@ const PickForm = ({ user, chosen }) => {
 
   return (
     <div>
-      <h1>{formValues.name}</h1>
       <button onClick={() => homeTeam()}>{chosen.home_team}</button>
       <button onClick={() => awayTeam()}>{chosen.away_team}</button>
 
       <button onClick={handleSubmit}>Submit Pick</button>
+      <h1>{formValues.name}</h1>
 
     </div>
   )
