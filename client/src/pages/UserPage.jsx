@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
+import '../styles/UserPage.css'
 
 const UserPage = ({ user }) => {
 
@@ -37,9 +38,9 @@ const UserPage = ({ user }) => {
       <div>
         <h2>Hello {details.username}, here are your picks</h2>
       </div>
-      <div>
+      <div className="picks">
         {picks.map((pick) => (
-          <div key={pick.id}>
+          <div key={pick.id} className="pick">
             <h1>{pick.title}</h1>
             <h1>{pick.name} {pick.price}</h1>
           </div>

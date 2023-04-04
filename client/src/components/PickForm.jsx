@@ -51,8 +51,8 @@ const PickForm = ({ user, chosen }) => {
           <button className='button' onClick={() => homeTeam()}>{chosen.home_team}</button>
           <button className='button' onClick={() => awayTeam()}>{chosen.away_team}</button>
         </div>
-        <h2>{formValues.name} ({formValues.price})</h2>
 
+        <h2>{formValues.name} ({formValues.price})</h2>
         <button className='button' onClick={handleSubmit}>Submit Pick</button>
       </div>
 
