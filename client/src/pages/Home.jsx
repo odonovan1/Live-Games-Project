@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import LoginForm from '../components/LoginForm'
 import RegisterForm from '../components/RegisterForm'
+import { NavLink } from "react-router-dom"
 import '../styles/Home.css'
 
 
@@ -25,9 +26,10 @@ const Home = ({ user, setUser }) => {
     <div className='home'>
       <div className='welcome'>
 
-        <h1>Welcome to the future of social picking!</h1>
+        <h1 className='h1'>Welcome to the future of social picking!</h1>
       </div>
       <img src='https://www.pinclipart.com/picdir/big/557-5575148_download-free-png-hd-sports-activities-clipart-sports.png' />
+      <h3 className='h1'>Checkout <NavLink to="/games" className="clickable">Live/Upcoming Games</NavLink> or take a look at what <NavLink to="/users" className="clickable">other people</NavLink> are picking!</h3>
     </div>
   ) : (
     <div>

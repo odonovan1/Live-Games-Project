@@ -10,3 +10,22 @@ img {
   height: 70vh;
   margin: auto;
 }
+
+.welcome {
+  font-family: 'Alfa Slab One', cursive;
+
+}
+
+.h1 {
+  color: goldenrod;
+}
+
+.clickable {
+  color: rgb(0, 167, 0);
+  transition: transform 0.2s;
+}
+
+.clickable:hover {
+  color: red;
+  transform: scale(1.2);
+}
