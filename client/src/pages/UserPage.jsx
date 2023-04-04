@@ -35,15 +35,16 @@ const UserPage = ({ user }) => {
 
   return (
     <div>
-      <div>
+      <div className="intro">
         <h2>Hello {details.username}, here are your picks</h2>
       </div>
       <div className="picks">
         {picks.map((pick) => (
           <div key={pick.id} className="pick">
-            <h2>{pick.title}</h2>
-            <h2>{pick.name} {pick.price}</h2>
-            <h2>{pick.pick_id}</h2>
+
+            <h2 className="pickDetails">{pick.name} to beat {pick.pick_id}</h2>
+            <h3>{pick.price} Moneyline</h3>
+
           </div>
         ))}
       </div>
