@@ -19,9 +19,9 @@
 }
 
 .liveGame:hover {
-  transform: scale(1.17);
-  margin: 3vh;
-  opacity: .5;
+  transform: scale(1.05);
+  margin: 1vh;
+  opacity: .7;
 }
 
 .matchup {

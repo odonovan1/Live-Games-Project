@@ -18,10 +18,27 @@ const GameDetails = ({ chosen, user }) => {
         </div>
 
         <div className="teamDetails">
-          <h3>Moneyline:  {chosen.bookmakers[0].markets[0].outcomes[0].price}</h3>
+          {chosen.bookmakers[0].markets[0].outcomes[0].price > 0 && (
+            <h3>Moneyline: (+{chosen.bookmakers[0].markets[0].outcomes[0].price})</h3>
+
+          )}
+          {chosen.bookmakers[0].markets[0].outcomes[0].price < 0 && (
+            <h3>MoneyLine: ({chosen.bookmakers[0].markets[0].outcomes[0].price})</h3>
+
+          )}
+
 
           <div className="odds">
-            <h3>Moneyline:  {chosen.bookmakers[0].markets[0].outcomes[1].price}</h3>
+            {chosen.bookmakers[0].markets[0].outcomes[1].price > 0 && (
+              <h3>Moneyline: (+{chosen.bookmakers[0].markets[0].outcomes[1].price})</h3>
+
+            )}
+            {chosen.bookmakers[0].markets[0].outcomes[1].price < 0 && (
+              <h3>MoneyLine: ({chosen.bookmakers[0].markets[0].outcomes[1].price})</h3>
+
+            )}
+
+
           </div>
         </div>
       </div>

@@ -30,12 +30,29 @@ const LiveGames = ({ games, user, setChosen }) => {
             <h2 className="title">{game.sport_title}</h2>
             <div className="matchup">
               <div className="teams">
-                <h3>{game.home_team} ({game.bookmakers[0].markets[0].outcomes[0].price})</h3>
+                {game.bookmakers[0].markets[0].outcomes[0].price > 0 && (
+                  <h3>{game.home_team} (+{game.bookmakers[0].markets[0].outcomes[0].price})</h3>
+
+                )}
+                {game.bookmakers[0].markets[0].outcomes[0].price < 0 && (
+                  <h3>{game.home_team} ({game.bookmakers[0].markets[0].outcomes[0].price})</h3>
+
+                )}
+
+
                 <h3>Home</h3>
               </div>
               <h2 className="vs">vs</h2>
               <div className="teams">
-                <h3>{game.away_team} ({game.bookmakers[0].markets[0].outcomes[1].price})</h3>
+                {game.bookmakers[0].markets[0].outcomes[1].price > 0 && (
+                  <h3>{game.away_team} (+{game.bookmakers[0].markets[0].outcomes[1].price})</h3>
+
+                )}
+                {game.bookmakers[0].markets[0].outcomes[1].price < 0 && (
+                  <h3>{game.away_team} ({game.bookmakers[0].markets[0].outcomes[1].price})</h3>
+
+                )}
+
                 <h3>Away</h3>
               </div>
             </div>
