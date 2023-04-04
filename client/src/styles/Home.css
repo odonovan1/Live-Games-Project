@@ -1,0 +1,12 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+}
+
+img {
+  width: 50vw;
+  height: 70vh;
+  margin: auto;
+}

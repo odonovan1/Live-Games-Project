@@ -84,7 +84,7 @@ function App() {
           <Route path="/login" element={<LoginForm setUser={setUser} />}></Route>
           <Route path="/register" element={<RegisterForm />}></Route>
           <Route path="/password" element={<UpdatePasswordForm user={user} />}></Route>
-          <Route path="/users" element={<Users setOther={setOther} users={users} />}></Route>
+          <Route path="/users" element={<Users setOther={setOther} users={users} getUsers={getUsers} />}></Route>
           <Route path="/view" element={<UserDetails other={other} />}></Route>
         </Routes>
 

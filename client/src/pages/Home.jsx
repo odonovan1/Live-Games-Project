@@ -22,8 +22,12 @@ const Home = ({ user, setUser }) => {
 
 
   return user ? (
-    <div>
-      <h1>Hallo</h1>
+    <div className='home'>
+      <div className='welcome'>
+
+        <h1>Welcome to the future of social picking!</h1>
+      </div>
+      <img src='https://www.pinclipart.com/picdir/big/557-5575148_download-free-png-hd-sports-activities-clipart-sports.png' />
     </div>
   ) : (
     <div>
