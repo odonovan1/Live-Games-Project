@@ -28,6 +28,7 @@ const UpdatePasswordForm = ({ user }) => {
     })
 
     setFormValues(initialState)
+    navigate('/')
 
   }
 

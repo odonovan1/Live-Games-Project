@@ -12,7 +12,7 @@ const Users = ({ setOther, users }) => {
   return (
     <div className="users">
       {users.map((user) => (
-        <div key={user.id}>
+        <div key={user.id} className="user">
           <Link to={`/view`} onClick={() => handleClick(user)}>
             <h1>{user.username}</h1>
           </Link>

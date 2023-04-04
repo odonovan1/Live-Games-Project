@@ -1,0 +1,31 @@
+.users {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+  padding-top: 4vh;
+  gap: 3vw;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+
+}
+
+.user {
+  border: 5px solid goldenrod;
+  width: 15vw;
+  margin: auto;
+  border-radius: 5px;
+  background-color: azure;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transition: transform 0.2s;
+}
+
+.user:hover {
+  transform: scale(1.2);
+  border: 5px solid red;
+}
+
+h1 {
+  color: black;
+}
