@@ -65,11 +65,11 @@
 }
 
 .clickable {
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: underline;
   transition: transform 0.2s;
 }
 
 .clickable:hover {
-  color: rgb(88, 88, 88);
+  color: goldenrod;
 }

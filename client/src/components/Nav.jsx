@@ -9,10 +9,10 @@ const Nav = ({ user, handleLogout }) => {
     <nav >
       <div className="navBar">
         <div className="mainLinks">
-          <NavLink to="/" className="link"><i class="fa-solid fa-house"></i></NavLink>
+          <NavLink to="/" className="link"><i className="fa-solid fa-house"></i></NavLink>
           {/* <NavLink to="/about" className="link">About</NavLink> */}
-          <NavLink to="/user" className="link"><i class="fa-solid fa-user"></i></NavLink>
-          <NavLink to="/games" className="link"><i class="fa-solid fa-scale-balanced"></i></NavLink>
+          <NavLink to="/user" className="link"><i className="fa-solid fa-user"></i></NavLink>
+          <NavLink to="/games" className="link"><i className="fa-solid fa-scale-balanced"></i></NavLink>
         </div>
         <div>
           <h1 className="name">
@@ -21,7 +21,7 @@ const Nav = ({ user, handleLogout }) => {
         </div>
         <div className="logout">
           <NavLink to="/" onClick={handleLogout} className="logoutButton">
-            <i class="fa-solid fa-user-xmark"></i>
+            <i className="fa-solid fa-user-xmark"></i>
           </NavLink>
         </div>
       </div>

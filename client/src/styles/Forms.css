@@ -32,7 +32,7 @@
 }
 
 .input {
-  border: 5px solid black;
+  border: 5px solid goldenrod;
   width: 11vw;
   height: 3vh;
   border-radius: 5px;
@@ -40,9 +40,12 @@
 
 .join {
   text-decoration: underline;
+  font-family: 'Alfa Slab One', cursive;
 }
 
 .formButton {
   height: 5vh;
   font-family: 'Alfa Slab One', cursive;
+  border: 8px solid goldenrod;
+  border-radius: 5px;
 }

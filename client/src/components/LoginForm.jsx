@@ -20,7 +20,7 @@ const LoginForm = ({ setUser }) => {
     const payload = await SignInUser(formValues)
     setFormValues(initialState)
     setUser(payload)
-    navigate('/api')
+    navigate('/api/')
 
   }
 
@@ -28,7 +28,7 @@ const LoginForm = ({ setUser }) => {
     <div className='formContainer'>
       <form onSubmit={handleSubmit} className="login-form">
         <div className='formValues loginForm'>
-          <h1>Login to check live odds</h1>
+          <h1 className='join'>Login to check live odds</h1>
 
           <label htmlFor="email" className="login-email-label">
             Email
