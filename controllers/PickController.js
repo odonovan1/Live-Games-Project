@@ -24,6 +24,7 @@ const getUserPicks = async (req, res) => {
 
 const deletePick = async (req, res) => {
   await Pick.destroy({ where: { id: req.params.pick_id } })
+  res.send({ msg: 'pick Deleted', payload: req.params.pick_id, status: 'Ok' })
 }
 
 

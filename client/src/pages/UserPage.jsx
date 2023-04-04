@@ -7,6 +7,7 @@ const UserPage = ({ user }) => {
   const [picks, setPicks] = useState([])
   const [details, setDetails] = useState({})
   const [games, setGames] = useState([])
+  const [loaded, setLoaded] = useState(false)
 
   const getPicks = async () => {
     const userPicks = await axios.get(`http://localhost:3001/api/pick/${user.id}/picks`)
@@ -26,14 +27,19 @@ const UserPage = ({ user }) => {
 
   }
 
-  const handleDelete = async () => {
-
+  const handleDelete = async (pick) => {
+    await axios.delete(`http://localhost:3001/api/pick/${pick.id}/delete`)
+    if (loaded === true) {
+      setLoaded(false)
+    } else if (loaded === false) {
+      setLoaded(true)
+    }
   }
 
 
   useEffect(() => {
     getPicks()
-  }, [user])
+  }, [user, loaded])
 
 
 
@@ -42,13 +48,13 @@ const UserPage = ({ user }) => {
       <div className="intro">
         <h2>Hello {details.username}, here are your picks</h2>
       </div>
-      <div className="picks">
+      <div className="userPicks">
         {picks.map((pick) => (
-          <div key={pick.id} className="pick">
+          <div key={pick.id} className="userPick">
 
             <h2 className="pickDetails">{pick.name} to beat {pick.pick_id}</h2>
             <h3>{pick.price} Moneyline</h3>
-            <button>DELETE</button>
+            <button className="delete" onClick={() => handleDelete(pick)}>DELETE</button>
           </div>
         ))}
       </div>

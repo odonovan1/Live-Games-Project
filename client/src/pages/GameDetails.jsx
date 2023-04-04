@@ -12,12 +12,13 @@ const GameDetails = ({ chosen, user }) => {
           <h3>Home: {chosen.home_team}</h3>
 
           <div className="odds">
-            <h3>Moneyline:  {chosen.bookmakers[0].markets[0].outcomes[0].price}</h3>
+            <h3>Away: {chosen.away_team} </h3>
+
           </div>
         </div>
 
         <div className="teamDetails">
-          <h3>Away: {chosen.away_team} </h3>
+          <h3>Moneyline:  {chosen.bookmakers[0].markets[0].outcomes[0].price}</h3>
 
           <div className="odds">
             <h3>Moneyline:  {chosen.bookmakers[0].markets[0].outcomes[1].price}</h3>
