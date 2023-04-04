@@ -29,13 +29,13 @@ const Home = ({ user, setUser }) => {
       {login === false && (
         <div>
           <RegisterForm />
-          <button onClick={() => switchLogin()}>Login</button>
+          {/* <button onClick={() => switchLogin()}>Login</button> */}
         </div>
       )}
       {login === true && (
         <div>
           <LoginForm setUser={setUser} />
-          <button onClick={() => switchLogin()}>Register</button>
+          {/* <button onClick={() => switchLogin()}>Register</button> */}
         </div>
       )}
     </div>
