@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import LoginForm from '../components/LoginForm'
 import RegisterForm from '../components/RegisterForm'
+import '../styles/Home.css'
 
 
 const Home = ({ user, setUser }) => {

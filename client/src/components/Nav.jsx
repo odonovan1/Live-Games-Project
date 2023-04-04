@@ -13,8 +13,8 @@ const Nav = ({ user, handleLogout }) => {
           {/* <NavLink to="/about" className="link">About</NavLink> */}
           <NavLink to="/user" className="link"><i className="fa-solid fa-user"></i></NavLink>
           <NavLink to="/games" className="link"><i className="fa-solid fa-scale-balanced"></i></NavLink>
-          <NavLink to="/password" className="link"><i class="fa-solid fa-pen-to-square"></i></NavLink>
           <NavLink to="/users" className="link"><i class="fa-solid fa-users"></i></NavLink>
+          <NavLink to="/password" className="link"><i class="fa-solid fa-pen-to-square"></i></NavLink>
         </div>
         <div>
           <h1 className="name">
