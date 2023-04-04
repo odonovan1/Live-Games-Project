@@ -11,10 +11,10 @@ const GameDetails = ({ chosen, user }) => {
         <div className="teamDetails">
           <h3>Home: {chosen.home_team}</h3>
 
-          <div className="odds">
-            <h3>Away: {chosen.away_team} </h3>
 
-          </div>
+          <h3>Away: {chosen.away_team} </h3>
+
+
         </div>
 
         <div className="teamDetails">
@@ -28,7 +28,7 @@ const GameDetails = ({ chosen, user }) => {
           )}
 
 
-          <div className="odds">
+          <div className="teamDetails">
             {chosen.bookmakers[0].markets[0].outcomes[1].price > 0 && (
               <h3>Moneyline: (+{chosen.bookmakers[0].markets[0].outcomes[1].price})</h3>
 
