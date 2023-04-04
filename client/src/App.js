@@ -13,6 +13,9 @@ import LiveGames from './pages/LiveGames'
 import UserPage from './pages/UserPage'
 import GameDetails from './pages/GameDetails'
 import UpdatePasswordForm from "./pages/UpdatePasswordForm";
+import UserDetails from "./pages/UserDetails";
+import Users from "./pages/Users";
+import Client from './services/api'
 import './App.css'
 
 
@@ -22,6 +25,8 @@ function App() {
   const [user, setUser] = useState(null)
   const [refresh, setRefresh] = useState(true)
   const [chosen, setChosen] = useState(null)
+  const [other, setOther] = useState(null)
+  const [users, setUsers] = useState(null)
   const apiKey = process.env.REACT_APP_ODDS_KEY
 
 
@@ -45,6 +50,11 @@ function App() {
 
   }
 
+  const getUsers = async () => {
+    const response = await axios.get(`http://localhost:3001/api/auth/users`)
+    setUsers(response.data)
+  }
+
   const handleRefresh = async () => {
     if (refresh === true) {
       setRefresh(false)
@@ -59,6 +69,7 @@ function App() {
       checkToken()
     }
     getGames()
+    getUsers()
   }, [refresh])
   return (
     <div className="App">
@@ -73,6 +84,8 @@ function App() {
           <Route path="/login" element={<LoginForm setUser={setUser} />}></Route>
           <Route path="/register" element={<RegisterForm />}></Route>
           <Route path="/password" element={<UpdatePasswordForm user={user} />}></Route>
+          <Route path="/users" element={<Users setOther={setOther} users={users} />}></Route>
+          <Route path="/view" element={<UserDetails other={other} />}></Route>
         </Routes>
 
       </main>

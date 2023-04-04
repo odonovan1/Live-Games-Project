@@ -25,7 +25,7 @@ const LiveGames = ({ games, user, setChosen }) => {
         <h1>Live & Upcoming</h1>
       </div>
       {games.map((game) => (
-        <div ket={game.id} className="liveGame">
+        <div key={game.id} className="liveGame">
           <Link to={`/details`} onClick={() => onClick(game)}>
             <h2 className="title">{game.sport_title}</h2>
             <div className="matchup">
