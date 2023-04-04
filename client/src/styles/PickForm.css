@@ -1,0 +1,21 @@
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.pick {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  border: 5px solid goldenrod;
+  height: 5vh;
+  width: 10vw;
+
+}
