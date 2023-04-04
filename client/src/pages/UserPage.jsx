@@ -41,8 +41,9 @@ const UserPage = ({ user }) => {
       <div className="picks">
         {picks.map((pick) => (
           <div key={pick.id} className="pick">
-            <h1>{pick.title}</h1>
-            <h1>{pick.name} {pick.price}</h1>
+            <h2>{pick.title}</h2>
+            <h2>{pick.name} {pick.price}</h2>
+            <h2>{pick.pick_id}</h2>
           </div>
         ))}
       </div>

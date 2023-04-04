@@ -7,7 +7,8 @@ import { useNavigate } from 'react-router-dom'
 const PickForm = ({ user, chosen }) => {
   const initialState = {
     price: 'selection',
-    name: null
+    name: null,
+    pick_id: null
 
 
   }
@@ -20,11 +21,11 @@ const PickForm = ({ user, chosen }) => {
 
 
   const homeTeam = () => {
-    setFormValues({ name: chosen.home_team, price: chosen.bookmakers[0].markets[0].outcomes[0].price })
+    setFormValues({ name: chosen.home_team, price: chosen.bookmakers[0].markets[0].outcomes[0].price, pick_id: chosen.away_team })
     setGameDetails({ awayTeam: chosen.away_team, homeTeam: chosen.home_team, title: chosen.sport_title })
   }
   const awayTeam = () => {
-    setFormValues({ name: chosen.away_team, price: chosen.bookmakers[0].markets[0].outcomes[1].price })
+    setFormValues({ name: chosen.away_team, price: chosen.bookmakers[0].markets[0].outcomes[1].price, pick_id: chosen.home_team })
   }
 
   const handleSubmit = async (e) => {
