@@ -54,3 +54,7 @@
 .formButton:hover {
   transform: scale(1.2);
 }
+
+.newPassword {
+  height: 34vh;
+}

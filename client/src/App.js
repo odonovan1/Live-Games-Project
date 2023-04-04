@@ -12,6 +12,7 @@ import About from './pages/About'
 import LiveGames from './pages/LiveGames'
 import UserPage from './pages/UserPage'
 import GameDetails from './pages/GameDetails'
+import UpdatePasswordForm from "./pages/UpdatePasswordForm";
 import './App.css'
 
 
@@ -71,6 +72,7 @@ function App() {
           <Route path="/details" element={<GameDetails chosen={chosen} setChosen={setChosen} user={user} />} />
           <Route path="/login" element={<LoginForm setUser={setUser} />}></Route>
           <Route path="/register" element={<RegisterForm />}></Route>
+          <Route path="/password" element={<UpdatePasswordForm user={user} />}></Route>
         </Routes>
 
       </main>
