@@ -53,7 +53,14 @@ const UserPage = ({ user }) => {
           <div key={pick.id} className="userPick">
 
             <h2 className="pickDetails"><span className="winner">{pick.name}</span> to beat <span className="loser">{pick.pick_id}</span></h2>
-            <h3>{pick.price} Moneyline</h3>
+            {pick.price > 0 && (
+              <h3>+{pick.price} Moneyline</h3>
+            )}
+            {pick.price < 0 && (
+              <h3>{pick.price} Moneyline</h3>
+            )}
+
+
             <button className="delete" onClick={() => handleDelete(pick)}>DELETE</button>
           </div>
         ))}
