@@ -30,6 +30,17 @@ const FindUserById = async (req, res) => {
   }
 }
 
+const FindUsers = async (req, res) => {
+  try {
+
+
+    const users = await User.findAll()
+    res.send(users)
+  } catch (error) {
+
+  }
+}
+
 const FindUserGames = async (req, res) => {
   try {
     const userId = parseInt(req.params.user_id)
@@ -122,5 +133,6 @@ module.exports = {
   UpdatePassword,
   CheckSession,
   FindUserById,
-  FindUserGames
+  FindUserGames,
+  FindUsers
 }

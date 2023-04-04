@@ -18,5 +18,6 @@ router.get(
 )
 router.get('/:user_id/details', controller.FindUserById)
 router.get('/:user_id/games', controller.FindUserGames)
+router.get('/users', controller.FindUsers)
 
 module.exports = router
