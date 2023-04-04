@@ -4,18 +4,24 @@
   margin: auto;
   justify-content: center;
   align-items: center;
-  padding-top: 3vh;
-  gap: 2vh;
+  padding-top: 5vh;
+  gap: 1vh;
 
 }
 
 .liveGame {
-  border: 5px solid rgb(21, 182, 0);
+  border: 8px solid rgb(0, 0, 0);
   background-color: rgb(146, 146, 146);
   width: 45vw;
   text-align: center;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
 
-
+.liveGame:hover {
+  transform: scale(1.17);
+  margin: 3vh;
+  opacity: .5;
 }
 
 .matchup {
@@ -28,7 +34,9 @@
 }
 
 .vs {
-  color: goldenrod;
+  color: rgb(153, 23, 23);
+  font-size: 5ch;
+  font-style: italic;
 }
 
 .date {
@@ -46,7 +54,15 @@
 
 .teams {
   text-align: center;
-  border: 7px solid goldenrod;
+  border: 7px solid rgb(0, 0, 0);
   margin: 1vw;
   border-radius: 6px;
+  background-color: rgb(27, 165, 8);
+}
+
+.header {
+  background-color: goldenrod;
+  width: 17vw;
+  text-align: center;
+  border-radius: 9px;
 }

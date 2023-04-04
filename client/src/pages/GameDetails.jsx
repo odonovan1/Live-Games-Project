@@ -1,16 +1,28 @@
 import PickForm from "../components/PickForm"
+import '../styles/GameDetails.css'
 const GameDetails = ({ chosen, user }) => {
 
 
   return (
     <div>
-      <div>
-        <h1>{chosen.sport_title}</h1>
-        <div>
-          <h3>{chosen.home_team} {chosen.bookmakers[0].markets[0].outcomes[0].price}</h3>
+      <div className="fullPage">
+        <div className="details">
+          <h2>Organization: {chosen.sport_title}</h2>
+          <div className="teamDetails">
+            <h3>Home Team:</h3>
+            <h3>{chosen.home_team}</h3>
+            <div className="odds">
+              <h3>Moneyline:  {chosen.bookmakers[0].markets[0].outcomes[0].price}</h3>
+            </div>
+          </div>
 
-          <h2>vs</h2>
-          <h3>{chosen.away_team} {chosen.bookmakers[0].markets[0].outcomes[1].price}</h3>
+          <div className="teamDetails">
+            <h3>Away Team:</h3>
+            <h3>{chosen.away_team} </h3>
+            <div className="odds">
+              <h3>Moneyline:  {chosen.bookmakers[0].markets[0].outcomes[1].price}</h3>
+            </div>
+          </div>
         </div>
       </div>
       {user && (
