@@ -19,7 +19,7 @@
   flex-direction: column;
   background-color: rgb(145, 145, 145);
   width: 35vw;
-  height: 20vh;
+  height: 23vh;
 
 }
 
@@ -40,5 +40,17 @@
   margin: auto;
   border-radius: 5px;
   font-family: 'Alfa Slab One', cursive;
+  transition: transform 0.2s;
+}
 
+.delete:hover {
+  transform: scale(1.2);
+}
+
+.winner {
+  color: rgb(23, 94, 23);
+}
+
+.loser {
+  color: rgb(114, 9, 9);
 }
