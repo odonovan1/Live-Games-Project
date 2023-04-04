@@ -12,7 +12,7 @@
 .liveGame {
   border: 5px solid rgb(21, 182, 0);
   background-color: rgb(146, 146, 146);
-  width: 40vw;
+  width: 45vw;
   text-align: center;
 
 
@@ -29,4 +29,21 @@
 
 .vs {
   color: goldenrod;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  color: black;
+}
+
+.title {
+  font-family: 'Alfa Slab One', cursive;
+  color: rgb(0, 0, 0);
+}
+
+.teams {
+  text-align: center;
 }
