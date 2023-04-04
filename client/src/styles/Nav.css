@@ -1,0 +1,29 @@
+.navBar {
+  display: grid;
+  height: 7.5vh;
+  align-items: center;
+  grid-template-columns: 2fr 1fr 2fr;
+  background-color: rgb(180, 53, 31);
+  border: 10px;
+  border-radius: 5px;
+
+
+
+}
+
+.link {
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+}
+
+.logout {
+  text-align: right;
+  padding-right: 2vw;
+}
+
+.mainLinks {
+  display: flex;
+  gap: 2vw;
+  padding-left: 3vw;
+}

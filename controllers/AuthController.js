@@ -9,8 +9,9 @@ const Register = async (req, res) => {
     let passwordDigest = await middleware.hashPassword(password)
     // Creates a new user
     const user = await User.create({ email, passwordDigest, username })
+
     // Sends the user as a response
-    res.send(user)
+    res.send({ email: user.email, passwordDigest: user.passwordDigest, username: user.username })
   } catch (error) {
     throw error
   }
@@ -43,7 +44,7 @@ const FindUserGames = async (req, res) => {
         }
       ]
     })
-    console.log(userAndComments.games)
+
     res.send(userAndComments)
   } catch (error) {
 

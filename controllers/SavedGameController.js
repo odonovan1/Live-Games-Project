@@ -1,9 +1,9 @@
-const { Comment, Game, User } = require('../models')
+const { Comment, SavedGame, User } = require('../models')
 
 
 const getGames = async (req, res) => {
   try {
-    const games = await Game.findAll()
+    const games = await SavedGame.findAll()
     res.send(games)
   } catch (error) {
 
@@ -13,7 +13,7 @@ const getGames = async (req, res) => {
 const getGameComments = async (req, res) => {
   try {
     const gameId = parseInt(req.params.game_id)
-    const game = await Game.findOne({
+    const game = await SavedGame.findOne({
       where: { id: gameId }
     })
     const comments = await Comment.findAll({ where: { game_id: gameId } })
@@ -26,8 +26,8 @@ const getGameComments = async (req, res) => {
 
 const createGame = async (req, res) => {
   try {
-    const newGame = { ...req.body, user_id: parseInt(req.params.user_id) }
-    const created = await Game.create(newGame)
+    const newGame = { ...req.body }
+    const created = await SavedGame.create(newGame)
 
     const baseComment = {
       user_id: 1,
@@ -44,7 +44,7 @@ const createGame = async (req, res) => {
 
 const updateGame = async (req, res) => {
   try {
-    const game = await Game.update(
+    const game = await SavedGame.update(
       { ...req.body },
       { where: { id: req.params.game_id }, returning: true }
     )
@@ -56,7 +56,7 @@ const updateGame = async (req, res) => {
 
 const deleteGame = async (req, res) => {
   try {
-    await Game.destroy({ where: { id: req.params.game_id } })
+    await SavedGame.destroy({ where: { id: req.params.game_id } })
     res.send({ msg: 'Game Deleted', payload: req.params.game_id, status: 'Ok' })
   } catch (error) {
 

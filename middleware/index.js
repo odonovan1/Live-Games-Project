@@ -30,10 +30,9 @@ const createToken = (payload) => {
 
 const stripToken = (req, res, next) => {
   try {
-    console.log(`req.headers goes HERE: `)
-    console.log(req.headers)
+
     const token = req.headers['authorization'].split(' ')[1]
-    console.log(token)
+
     // Gets the token from the request headers {authorization: Bearer Some-Token}
     // Splits the value of the authorization header
     if (token) {

@@ -10,8 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Pick.hasOne(models.User, { foreignKey: 'user_id ' })
-      Pick.hasOne(models.Game, { foreignKey: 'game_id' })
+      // Pick.belongsTo(models.User, { foreignKey: 'user_id ' })
+      // Pick.belongsTo(models.Game, { foreignKey: 'game_id' })
     }
   }
   Pick.init({

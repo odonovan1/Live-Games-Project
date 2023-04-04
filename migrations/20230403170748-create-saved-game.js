@@ -2,27 +2,30 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('picks', {
+    await queryInterface.createTable('savedgames', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      price: {
-        type: Sequelize.INTEGER
+      group: {
+        type: Sequelize.STRING
       },
-      name: {
+      title: {
+        type: Sequelize.STRING
+      },
+      description: {
+        type: Sequelize.STRING
+      },
+      homeTeam: {
+        type: Sequelize.STRING
+      },
+      awayTeam: {
         type: Sequelize.STRING
       },
       pick_id: {
         type: Sequelize.STRING
-      },
-      user_id: {
-        type: Sequelize.INTEGER
-      },
-      game_id: {
-        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
@@ -35,6 +38,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('picks');
+    await queryInterface.dropTable('savedgames');
   }
 };

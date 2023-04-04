@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'game_id'
       })
       Game.belongsTo(models.User, { foreignKey: 'user_id' })
-      Game.belongsTo(models.Pick, { foreignKey: 'pick_id' })
+      Game.hasMany(models.Pick, { foreignKey: 'game_id' })
     }
   }
   Game.init({
