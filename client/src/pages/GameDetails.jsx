@@ -4,27 +4,27 @@ const GameDetails = ({ chosen, user }) => {
 
 
   return (
-    <div>
-      <div className="fullPage">
-        <div className="details">
-          <h2>Organization: {chosen.sport_title}</h2>
-          <div className="teamDetails">
-            <h3>Home Team:</h3>
-            <h3>{chosen.home_team}</h3>
-            <div className="odds">
-              <h3>Moneyline:  {chosen.bookmakers[0].markets[0].outcomes[0].price}</h3>
-            </div>
-          </div>
+    <div className="fullPage">
 
-          <div className="teamDetails">
-            <h3>Away Team:</h3>
-            <h3>{chosen.away_team} </h3>
-            <div className="odds">
-              <h3>Moneyline:  {chosen.bookmakers[0].markets[0].outcomes[1].price}</h3>
-            </div>
+      <div className="details">
+        <h2>Organization: {chosen.sport_title}</h2>
+        <div className="teamDetails">
+          <h3>Home Team:</h3>
+          <h3>{chosen.home_team}</h3>
+          <div className="odds">
+            <h3>Moneyline:  {chosen.bookmakers[0].markets[0].outcomes[0].price}</h3>
+          </div>
+        </div>
+
+        <div className="teamDetails">
+          <h3>Away Team:</h3>
+          <h3>{chosen.away_team} </h3>
+          <div className="odds">
+            <h3>Moneyline:  {chosen.bookmakers[0].markets[0].outcomes[1].price}</h3>
           </div>
         </div>
       </div>
+
       {user && (
         <div>
           <PickForm chosen={chosen} user={user} />

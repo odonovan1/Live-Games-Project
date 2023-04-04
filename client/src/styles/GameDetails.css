@@ -1,0 +1,10 @@
+.fullPage {
+  display: flex;
+  background-color: gray;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  margin: auto;
+  margin-top: 4vh;
+}
