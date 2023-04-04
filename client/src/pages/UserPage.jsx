@@ -30,8 +30,7 @@ const UserPage = ({ user }) => {
     getPicks()
   }, [user])
 
-  console.log(picks)
-  console.log(games)
+
 
   return (
     <div>

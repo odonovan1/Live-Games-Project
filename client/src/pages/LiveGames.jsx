@@ -8,6 +8,16 @@ const LiveGames = ({ games, user, setChosen }) => {
     setChosen(game)
 
   }
+  console.log(games)
+
+  const handleTime = (time) => {
+    const splitTime = time.split('T')
+    return splitTime[1]
+  }
+  const handleDate = (time) => {
+    const splitDate = time.split('T')
+    return splitDate[0]
+  }
 
   return (
     <div className="gameContainer">
@@ -20,6 +30,9 @@ const LiveGames = ({ games, user, setChosen }) => {
 
               <h2 className="vs">vs</h2>
               <h3>{game.away_team} ({game.bookmakers[0].markets[0].outcomes[1].price})</h3>
+            </div>
+            <div>
+              <h4>{handleTime(game.commence_time).slice(0, 5)}</h4>
             </div>
           </Link>
         </div>
