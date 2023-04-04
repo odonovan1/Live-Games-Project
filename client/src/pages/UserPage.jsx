@@ -46,7 +46,7 @@ const UserPage = ({ user }) => {
   return (
     <div>
       <div className="intro">
-        <h2>Hello {details.username}, here are your picks</h2>
+        <h2>Helo {details.username}, here are your picks</h2>
       </div>
       <div className="userPicks">
         {picks.map((pick) => (
